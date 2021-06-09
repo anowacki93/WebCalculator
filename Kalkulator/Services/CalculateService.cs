@@ -14,26 +14,22 @@ namespace Kalkulator.Services
             model.Result = model.Value1 + model.Value2;
             return model.Result;
         }
-
         public double Divide(CalculatorViewModel model)
         {
             model.Result = model.Value1 / model.Value2;
             return model.Result;
         }
-
         public double Modulo(CalculatorViewModel model)
         {
             model.Result = model.Value1 % model.Value2;
             return model.Result;
         }
-
         public double Multiply(CalculatorViewModel model)
         {
 
             model.Result = model.Value1 * model.Value2;
             return model.Result;
         }
-
         public double Sububstract(CalculatorViewModel model)
         {
             model.Result = model.Value1 - model.Value2;

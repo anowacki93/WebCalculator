@@ -17,8 +17,6 @@ namespace Kalkulator.Controllers
         {
             _modelService = modelService;
         }
-       
-
         [HttpGet]
         public ActionResult Index()
         {
@@ -49,8 +47,5 @@ namespace Kalkulator.Controllers
             }
             return View(model);
         }
-
-  
-
     }
 }
