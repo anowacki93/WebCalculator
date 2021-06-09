@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pyza\\source\\repos\\Kalkulator\\Kalkulator\\Kalkulator.csproj": {}
+    "D:\\TESTY\\WebCalculator\\Kalkulator\\Kalkulator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pyza\\source\\repos\\Kalkulator\\Kalkulator\\Kalkulator.csproj": {
+    "D:\\TESTY\\WebCalculator\\Kalkulator\\Kalkulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pyza\\source\\repos\\Kalkulator\\Kalkulator\\Kalkulator.csproj",
+        "projectUniqueName": "D:\\TESTY\\WebCalculator\\Kalkulator\\Kalkulator.csproj",
         "projectName": "Kalkulator",
-        "projectPath": "C:\\Users\\Pyza\\source\\repos\\Kalkulator\\Kalkulator\\Kalkulator.csproj",
+        "projectPath": "D:\\TESTY\\WebCalculator\\Kalkulator\\Kalkulator.csproj",
         "packagesPath": "C:\\Users\\Pyza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pyza\\source\\repos\\Kalkulator\\Kalkulator\\obj\\",
+        "outputPath": "D:\\TESTY\\WebCalculator\\Kalkulator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
