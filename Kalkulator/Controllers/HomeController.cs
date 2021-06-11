@@ -18,16 +18,18 @@ namespace Kalkulator.Controllers
             _modelService = modelService;
         }
         [HttpGet]
-        public ActionResult Index()
+        public IActionResult Index()
         {
-            return View();
+            CalculatorViewModel model = new CalculatorViewModel();
+            return View(model);
         }
         [HttpPost]
-        public ActionResult Index(CalculatorViewModel model, string command)
+        public IActionResult Index(CalculatorViewModel model, string command)
         {
             if (command == "add")
             {
                 _modelService.Addition(model);
+                
             }
             if (command == "sub")
             {
@@ -45,7 +47,9 @@ namespace Kalkulator.Controllers
             {
                 _modelService.Modulo(model);
             }
+            
             return View(model);
         }
+        
     }
 }

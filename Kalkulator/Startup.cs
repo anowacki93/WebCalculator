@@ -32,7 +32,7 @@ namespace Kalkulator
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Context.DbContext>(builder =>
+            services.AddDbContext<Context.CalcDbContext>(builder =>
             {
                 builder.UseSqlServer(Configuration["DefaultConnection"]);
             });

@@ -383,8 +383,6 @@ C:\Users\Pyza\source\repos\Kalkulator\Kalkulator\obj\Debug\netcoreapp3.1\Kalkula
 C:\Users\Pyza\source\repos\Kalkulator\Kalkulator\obj\Debug\netcoreapp3.1\Kalkulator.pdb
 C:\Users\Pyza\source\repos\Kalkulator\Kalkulator\obj\Debug\netcoreapp3.1\Kalkulator.genruntimeconfig.cache
 C:\Users\Pyza\source\repos\Kalkulator\Kalkulator\obj\Debug\netcoreapp3.1\Kalkulator.csprojAssemblyReference.cache
-D:\TESTY\WebCalculator\Kalkulator\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\TESTY\WebCalculator\Kalkulator\bin\Debug\netcoreapp3.1\appsettings.json
 D:\TESTY\WebCalculator\Kalkulator\bin\Debug\netcoreapp3.1\appsettings.xml
 D:\TESTY\WebCalculator\Kalkulator\bin\Debug\netcoreapp3.1\Kalkulator.exe
 D:\TESTY\WebCalculator\Kalkulator\bin\Debug\netcoreapp3.1\Kalkulator.deps.json

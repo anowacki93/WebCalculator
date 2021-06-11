@@ -8,6 +8,7 @@ namespace Kalkulator.Models
 {
     public class CalculatorViewModel
     {
+        public int Id { get; set; }
         [Required]
         //[RegularExpression("some regex", ErrorMessage = "Tylko Liczby")]
         public double Value1
@@ -26,6 +27,10 @@ namespace Kalkulator.Models
         {
             get;
             set;
+        }
+        public string Operation
+        {
+            get;set;
         }
     }
 }
