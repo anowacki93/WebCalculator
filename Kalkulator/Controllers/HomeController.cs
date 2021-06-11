@@ -48,9 +48,36 @@ namespace Kalkulator.Controllers
             }
             return View(model);
         }
-        public IActionResult Show()
+        public IActionResult Show(string? command)
         {
             var modelData = _modelService.GetAll();
+            if (command == "addGet")
+            {
+                modelData=_modelService.GetAll().Where(x => x.Operation == "Addition").ToList();
+
+            }
+            if (command == "subGet")
+            {
+                modelData= _modelService.GetAll().Where(x => x.Operation == "Substract").ToList();
+            }
+            if (command == "mulGet")
+            {
+                modelData= _modelService.GetAll().Where(x => x.Operation == "Multiply").ToList();
+            }
+            if (command == "divGet")
+            {
+                modelData= _modelService.GetAll().Where(x => x.Operation == "Divide").ToList();
+            }
+            if (command == "modGet")
+            {
+                modelData= _modelService.GetAll().Where(x => x.Operation == "Modulo").ToList();
+            }
+            if (command == "All")
+            {
+                modelData = _modelService.GetAll();
+            }
+
+
             return View(modelData);
         }
 
