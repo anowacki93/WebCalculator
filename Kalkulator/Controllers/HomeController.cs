@@ -18,10 +18,9 @@ namespace Kalkulator.Controllers
             _modelService = modelService;
         }
         [HttpGet]
-        public IActionResult Index()
+        public ActionResult Index()
         {
-            CalculatorViewModel model = new CalculatorViewModel();
-            return View(model);
+            return View();
         }
         [HttpPost]
         public IActionResult Index(CalculatorViewModel model, string command)
@@ -47,9 +46,13 @@ namespace Kalkulator.Controllers
             {
                 _modelService.Modulo(model);
             }
-            
             return View(model);
         }
-        
+        public IActionResult Show()
+        {
+            var modelData = _modelService.GetAll();
+            return View(modelData);
+        }
+
     }
 }

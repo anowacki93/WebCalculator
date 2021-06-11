@@ -31,6 +31,7 @@ namespace Kalkulator.Services
             _context.SaveChanges();
             return model.Result;
         }
+
         public double Modulo(CalculatorViewModel model)
         {
             model.Operation = "Modulo";
@@ -54,6 +55,10 @@ namespace Kalkulator.Services
             _context.CalculatorViewModels.Add(model);
             _context.SaveChanges();
             return model.Result;
+        }
+        public IList<CalculatorViewModel> GetAll()
+        {
+            return _context.CalculatorViewModels.ToList();
         }
     }
 }

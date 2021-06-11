@@ -766,3 +766,4 @@ D:\TESTY\WebCalculator\Kalkulator\obj\Debug\netcoreapp3.1\Kalkulator.csproj.Copy
 D:\TESTY\WebCalculator\Kalkulator\obj\Debug\netcoreapp3.1\Kalkulator.dll
 D:\TESTY\WebCalculator\Kalkulator\obj\Debug\netcoreapp3.1\Kalkulator.pdb
 D:\TESTY\WebCalculator\Kalkulator\obj\Debug\netcoreapp3.1\Kalkulator.genruntimeconfig.cache
+D:\TESTY\WebCalculator\Kalkulator\obj\Debug\netcoreapp3.1\Razor\Views\Home\Show.cshtml.g.cs

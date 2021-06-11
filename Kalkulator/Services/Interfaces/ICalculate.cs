@@ -13,6 +13,6 @@ namespace Kalkulator.Services.Interfaces
         public double Multiply(CalculatorViewModel model);
         public double Divide(CalculatorViewModel model);
         public double Modulo(CalculatorViewModel model);
-
+        public IList<CalculatorViewModel> GetAll();
     }
 }
