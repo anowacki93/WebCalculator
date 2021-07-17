@@ -51,24 +51,24 @@ namespace Kalkulator.Controllers
         public IActionResult Show(string? command)
         {
             var modelData = _modelService.GetAll();
-            if (command == "addGet")
+            if (command == "Addition")
             {
                 modelData=_modelService.GetAll().Where(x => x.Operation == "Addition").ToList();
 
             }
-            if (command == "subGet")
+            if (command == "Substract")
             {
                 modelData= _modelService.GetAll().Where(x => x.Operation == "Substract").ToList();
             }
-            if (command == "mulGet")
+            if (command == "Multiply")
             {
                 modelData= _modelService.GetAll().Where(x => x.Operation == "Multiply").ToList();
             }
-            if (command == "divGet")
+            if (command == "Divide")
             {
                 modelData= _modelService.GetAll().Where(x => x.Operation == "Divide").ToList();
             }
-            if (command == "modGet")
+            if (command == "Modulo")
             {
                 modelData= _modelService.GetAll().Where(x => x.Operation == "Modulo").ToList();
             }
@@ -79,6 +79,11 @@ namespace Kalkulator.Controllers
 
 
             return View(modelData);
+        }
+        public IActionResult ShowByOperation(string operation)
+        {
+            var modelData = _modelService.GetAll();
+            return View(modelData.Where(x=>x.Operation== operation));
         }
 
     }
