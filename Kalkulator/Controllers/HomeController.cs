@@ -54,7 +54,6 @@ namespace Kalkulator.Controllers
             if (command == "Addition")
             {
                 modelData=_modelService.GetAll().Where(x => x.Operation == "Addition").ToList();
-
             }
             if (command == "Substract")
             {

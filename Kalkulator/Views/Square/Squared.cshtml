@@ -1,0 +1,22 @@
+﻿@model Kalkulator.Models.SquareViewModel
+@{ ViewData["Title"] = "Square"; }
+
+<div class="col-md-16">
+ 
+    <form asp-action="Squared">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        @for (int i = 0; i < Model.ArraySize; i++)
+        {
+    <input asp-for="SquareArray[i]" class="form-control" />
+                    <span asp-validation-for="SquareArray[i]" class="text-danger"></span>}
+        <br>
+        <input type="submit" value="do" name="command" class="btn btn-primary" />
+        <br>
+        <br>
+        <h2 style="color:red">
+            @Html.Label("Result:")
+            @Html.DisplayFor(x => x.SumValue)
+        </h2>
+    </form>
+</div>

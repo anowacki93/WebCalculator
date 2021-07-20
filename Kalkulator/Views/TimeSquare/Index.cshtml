@@ -1,0 +1,29 @@
+﻿
+@{ ViewData["Title"] = "Index"; }
+
+<div class="col-md-16">
+    <script>
+        setInterval(function () {
+            // Just move your date creation inside the interval function
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date + " " + time; // Add the time to the date string
+            var timeLive = today.getHours() * 360 + today.getMinutes() * 60 + today.getSeconds();
+            // Now it will take the current date and put it in all html elements
+            document.getElementById('datetime').innerHTML = dateTime;
+            document.getElementById('timelive').innerHTML = timeLive;
+            document.getElementById('powtimelive').innerHTML = Math.pow(timeLive, 2);
+            
+            /*document.getElementById("demo").innerHTML = "Date/Time Sum Live:" + dateTime;*/
+
+        }, 1000);
+    </script>
+    <h2 style="color:blue">
+        <p>Date/Time Live: <span id="datetime"></span></p>
+        <p>Date/Time Sum Live: <span id="timelive"></span></p>
+        <p>Date/Time Sum+Pow Live: <span id="powtimelive"></span></p>
+    </h2>
+    
+
+</div>

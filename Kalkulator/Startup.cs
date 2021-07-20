@@ -36,16 +36,8 @@ namespace Kalkulator
             {
                 builder.UseSqlServer(Configuration["DefaultConnection"]);
             });
-
-            //services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<SDManDbContext>();
-
-            //services.AddIdentity<UserModel, IdentityRole<int>>().AddEntityFrameworkStores<SDManDbContext>();
             services.AddScoped<ICalculate, CalculateService>();
-            //services.AddScoped<IDepartmentService, DepartmentService>();
-            //services.AddScoped<IGroupService, GroupService>();
-            //services.AddScoped<IPriorityService, PriorityService>();
-            //services.AddScoped<IStatusService, StatusService>();
-            //services.AddScoped<IIncidentService, IncidentService>();
+            services.AddScoped<ISquare, SquareService>();
 
             services.AddMvc();
         }

@@ -1,0 +1,12 @@
+﻿@model Kalkulator.Models.SquareViewModel
+@{ ViewData["Title"] = "Square"; }
+
+<div class="col-md-16">
+    <form asp-action="Squared">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input asp-for="ArraySize" class="form-control" />
+        <span asp-validation-for="ArraySize" class="text-danger"></span>
+        <br>
+        <input type="submit" value="change array size" name="command" class="btn btn-primary" />
+    </form>
+</div>
