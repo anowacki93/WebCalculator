@@ -27,8 +27,7 @@ namespace Kalkulator.Controllers
         {
             if (command == "add")
             {
-                _modelService.Addition(model);
-                
+                _modelService.Addition(model); 
             }
             if (command == "sub")
             {

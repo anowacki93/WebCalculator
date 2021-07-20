@@ -3,27 +3,23 @@
 
 <div class="col-md-16">
     <script>
-        setInterval(function () {
-            // Just move your date creation inside the interval function
-            var today = new Date();
-            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-            var dateTime = date + " " + time; // Add the time to the date string
-            var timeLive = today.getHours() * 360 + today.getMinutes() * 60 + today.getSeconds();
-            // Now it will take the current date and put it in all html elements
-            document.getElementById('datetime').innerHTML = dateTime;
-            document.getElementById('timelive').innerHTML = timeLive;
-            document.getElementById('powtimelive').innerHTML = Math.pow(timeLive, 2);
-            
-            /*document.getElementById("demo").innerHTML = "Date/Time Sum Live:" + dateTime;*/
+        function myfunction() {
+            setInterval(function () {
+                var today = new Date();
+                var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                var dateTime = date + " " + time;
+                var timeLive = today.getHours() * 360 + today.getMinutes() * 60 + today.getSeconds();
+                document.getElementById('datetime').innerHTML = dateTime;
+                document.getElementById('timelive').innerHTML = timeLive;
+                document.getElementById('powtimelive').innerHTML = Math.pow(timeLive, 2);
 
-        }, 1000);
+            }, 100);
+        }
     </script>
-    <h2 style="color:blue">
-        <p>Date/Time Live: <span id="datetime"></span></p>
-        <p>Date/Time Sum Live: <span id="timelive"></span></p>
-        <p>Date/Time Sum+Pow Live: <span id="powtimelive"></span></p>
-    </h2>
+        <button class="btn-dark" onclick="myfunction()">Click To Show Data</button>
+        <h1 style="color:red">Date/Time:<span id="datetime"></span></h1>
+        <h2 style="color:blue">Date/Time Sum:<span id="timelive"></span></h2>
+        <h3 style="color:green">Date/Time Sum+Pow:<span id="powtimelive"></span></h3>
     
-
 </div>
