@@ -15,8 +15,6 @@ namespace Kalkulator.Services
             foreach (var item in model.SquareArray)
             {
                 model.SumValue += Convert.ToInt32(Math.Pow(item, 2));
-
-
             }
             return model.SumValue;
         }

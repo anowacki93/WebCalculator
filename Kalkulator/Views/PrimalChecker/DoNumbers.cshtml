@@ -1,0 +1,16 @@
+﻿@model Kalkulator.Models.PrimalCheckerViewModel
+
+@{ ViewData["Title"] = "PrimalChecker"; }
+
+<h1>Check Primal Numbers</h1>
+<div class="col-md-16">
+    <form asp-action="Index">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input asp-for="Value1" class="form-control" />
+        <span asp-validation-for="Value1" class="text-danger"></span>
+        <br>
+        <input type="submit" value="DoNumber" name="command" class="btn btn-primary" />
+    </form>
+</div>
+
+

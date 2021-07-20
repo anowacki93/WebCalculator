@@ -38,7 +38,7 @@ namespace Kalkulator.Controllers
             }
             else
             {
-                return View(model);
+                return View();
             }
 
         }

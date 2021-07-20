@@ -38,6 +38,7 @@ namespace Kalkulator
             });
             services.AddScoped<ICalculate, CalculateService>();
             services.AddScoped<ISquare, SquareService>();
+            services.AddScoped<IPrimalChecker, PrimalCheckerService>();
 
             services.AddMvc();
         }

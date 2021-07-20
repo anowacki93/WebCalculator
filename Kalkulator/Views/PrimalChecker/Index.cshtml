@@ -1,0 +1,32 @@
+﻿@model Kalkulator.Models.PrimalCheckerViewModel
+
+@{ ViewData["Title"] = "Index"; }
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="DoNumbers">OInce again</a>
+</p>
+<h2 style="color:red">
+    @Html.Label("Podana Liczba:")
+    @Html.DisplayFor(x => x.Value1)
+    @Html.Label("Ilość:")
+    @Html.DisplayFor(x => x.Amount)
+</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Liczby Pierwsze z podanego zakresu powyżej 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PrimalList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
