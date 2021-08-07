@@ -12,6 +12,7 @@ namespace Kalkulator.Services
         public PrimalCheckerViewModel Check(PrimalCheckerViewModel model)
         {
             model.PrimalList = new List<int>();
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
             for (int i = 0; i <= model.Value1; i++)
             {
                 int count = 0;
@@ -28,6 +29,8 @@ namespace Kalkulator.Services
                 }
             }
             model.Amount = model.PrimalList.Count();
+            stopwatch.Stop();
+            model.Time = stopwatch.ElapsedMilliseconds.ToString()+"ms";
             return model;
         }
     }

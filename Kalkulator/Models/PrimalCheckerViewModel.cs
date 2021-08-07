@@ -15,5 +15,6 @@ namespace Kalkulator.Models
         }
         public List<int> PrimalList { get; set; }
         public int Amount { get; set; }
+        public string Time { get; set; }
     }
 }

@@ -5,18 +5,20 @@
 <h1>View</h1>
 
 <p>
-    <a asp-action="DoNumbers">OInce again</a>
+    <a asp-action="DoNumbers">Once again</a>
 </p>
 <h2 style="color:red">
     @Html.Label("Podana Liczba:")
     @Html.DisplayFor(x => x.Value1)
     @Html.Label("Ilość:")
     @Html.DisplayFor(x => x.Amount)
+    @Html.Label("Czas:")
+    @Html.DisplayFor(x => x.Time)
 </h2>
 <table class="table">
     <thead>
         <tr>
-            <th>Liczby Pierwsze z podanego zakresu powyżej 1</th>
+            <th>Liczby Pierwsze z podanego zakresu</th>
         </tr>
     </thead>
     <tbody>

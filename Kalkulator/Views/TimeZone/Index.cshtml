@@ -1,0 +1,29 @@
+﻿
+@{ ViewData["Title"] = "Index"; }
+
+<div class="col-md-16">
+    <script>
+
+        setInterval(function () {
+            var today = new Date();
+            var datelocal = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var timelocal = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = datelocal + " " + timelocal;
+            var today8 = new Date();
+            var datelocal8 = today8.getFullYear() + '-' + (today8.getMonth() + 1) + '-' + today8.getDate();
+            var h = today8.setHours(today8.getHours()+6);
+            var timelocal8 = h + ":" + today8.getMinutes() + ":" + today8.getSeconds();
+            var dateTime8 = datelocal8 + " " + timelocal8;
+
+            document.getElementById('datetime').innerHTML = dateTime;
+            document.getElementById('datetime8').innerHTML = dateTime8;
+
+        }, 100);
+
+    </script>
+
+    <h1 style="color:red">Date/Time Local:<span id="datetime"></span></h1>
+    <h1 style="color:red">Date/Time Local:<span id="datetime8"></span></h1>
+
+
+</div>
