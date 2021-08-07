@@ -6,24 +6,44 @@
 
         setInterval(function () {
             var today = new Date();
-            var datelocal = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-            var timelocal = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var month = today.getMonth() + 1;
+            var day = today.getDate();
+            if (month < 10) { month = '0' + month; }
+            if (day < 10) { day = '0' + day; }
+            var hours = today.getHours();
+            if (hours < 10) { hours = '0' + hours; }
+            var minutes = today.getMinutes();
+            if (minutes < 10) { minutes = '0' + minutes; }
+            var seconds = today.getSeconds();
+            if (seconds < 10) { seconds = '0' + seconds; }
+            var datelocal = today.getFullYear() + '-' + month + '-' + day;
+            var timelocal = hours + ":" + minutes + ":" + seconds;
             var dateTime = datelocal + " " + timelocal;
+
             var today8 = new Date();
-            var datelocal8 = today8.getFullYear() + '-' + (today8.getMonth() + 1) + '-' + today8.getDate();
-            var h = today8.setHours(today8.getHours()+6);
-            var timelocal8 = h + ":" + today8.getMinutes() + ":" + today8.getSeconds();
+            today8.setHours(today8.getHours() + 8);
+            var month8 = today8.getMonth() + 1;
+            if (month8 < 10) { month8 = '0' + month8; }
+            var day8 = today8.getDate()+1;
+            if (day8 < 10) { day8 = '0' + day8; }
+            var hours8 = today8.getHours();
+            if (hours8 < 10) { hours8 = '0' + hours8; }
+            var minutes8 = today8.getMinutes();
+            if (minutes8 < 10) { minutes8 = '0' + minutes8; }
+            var seconds8 = today8.getSeconds();
+            if (seconds8 < 10) { seconds8 = '0' + seconds8; }
+            var datelocal8 = today8.getFullYear() + '-' + month8 + '-' + day8;
+            var timelocal8 = hours8 + ":" + minutes8 + ":" + seconds8;
             var dateTime8 = datelocal8 + " " + timelocal8;
-
             document.getElementById('datetime').innerHTML = dateTime;
-            document.getElementById('datetime8').innerHTML = dateTime8;
-
-        }, 100);
+            document.getElementById('dateTime8').innerHTML = dateTime8;
+        }, 1000);
 
     </script>
 
     <h1 style="color:red">Date/Time Local:<span id="datetime"></span></h1>
-    <h1 style="color:red">Date/Time Local:<span id="datetime8"></span></h1>
+    <h1 style="color:red">Date/Time Local+8:<span id="dateTime8"></span></h1>
+
 
 
 </div>
